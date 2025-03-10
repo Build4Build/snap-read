@@ -1,0 +1,46 @@
+
+    <svg width="1242" height="2688" viewBox="0 0 1242 2688" xmlns="http://www.w3.org/2000/svg">
+      <!-- Background -->
+      <rect width="1242" height="2688" fill="#FFFFFF" />
+      
+      <!-- Phone frame -->
+      <rect x="124.2" y="134.4" width="993.6" height="2419.2000000000003" 
+            fill="#1A1A1A" rx="40" ry="40" />
+      
+      <!-- Screen content -->
+      <rect x="186.29999999999998" y="268.8" width="869.4" height="2150.4" 
+            fill="#FFFFFF" rx="30" ry="30" />
+      
+      <!-- Status bar -->
+      <rect x="186.29999999999998" y="268.8" width="869.4" height="134.4" 
+            fill="#F5F5F5" rx="30" ry="30" />
+      
+      <!-- Time -->
+      <text x="621" y="336" font-family="Arial" font-size="53.76" 
+            fill="#000000" text-anchor="middle">9:41</text>
+      
+      <!-- Battery, WiFi, Signal icons -->
+      <g transform="translate(931.5, 309.12)">
+        <rect width="40.32" height="26.88" fill="#000000" rx="1" ry="1" />
+        <rect x="53.76" width="40.32" height="26.88" fill="#000000" rx="1" ry="1" />
+        <rect x="107.52" width="40.32" height="26.88" fill="#000000" rx="1" ry="1" />
+      </g>
+    
+      <g transform="translate(248.4, 537.6)">
+        <!-- Summary card -->
+        <rect x="0" y="0" width="745.1999999999999" height="1075.2" fill="#F5F5F5" rx="10" ry="10" />
+        <text x="372.59999999999997" y="268.8" font-family="Arial" font-size="80.64" 
+              fill="#000000" text-anchor="middle">Document Summary</text>
+        <text x="124.2" y="537.6" font-family="Arial" font-size="53.76" 
+              fill="#666666">• Key points extracted</text>
+        <text x="124.2" y="672" font-family="Arial" font-size="53.76" 
+              fill="#666666">• Main ideas highlighted</text>
+        <text x="124.2" y="806.4" font-family="Arial" font-size="53.76" 
+              fill="#666666">• Important quotes saved</text>
+      </g>
+      <text x="621" y="1612.8" font-family="Arial" font-size="134.4" 
+            fill="#000000" text-anchor="middle">AI-powered summaries</text>
+      <text x="621" y="1747.2" font-family="Arial" font-size="80.64" 
+            fill="#666666" text-anchor="middle">Save time on reading</text>
+    </svg>
+  

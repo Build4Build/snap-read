@@ -1,81 +1,97 @@
-# SnapRead
+# SnapRead - AI-Powered Document Scanner & Summarizer
 
-SnapRead is a mobile app that allows users to scan and summarize any reading material using AI. Take a photo of books, magazines, articles, or newspapers, and get instant summaries, key concepts, and memorable quotes.
+SnapRead is a powerful mobile app that helps you read and understand documents faster using AI technology. Simply scan any text, and get instant summaries, key points, and important quotes.
 
 ## Features
 
-- **Scan Reading Materials**: Capture photos of any text-based content
-- **AI-Powered Summaries**: Get concise summaries of scanned content
-- **Key Concepts & Quotes**: Extract important keywords and memorable quotes
-- **Reading History**: Build a personal library of all your scanned materials
-- **Reading Stats**: Track your reading habits and preferences
-- **Customizable**: Edit AI-generated summaries to your liking
+- 📱 Smart document scanning with AI-powered text recognition
+- 🤖 Instant summaries and key points extraction
+- 📚 Reading history and organization
+- 📊 Reading analytics and progress tracking
+- 🔒 Privacy-first approach with on-device processing
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js (v16 or later)
+- Node.js (v14 or later)
 - npm or yarn
 - Expo CLI
-- iOS or Android emulator (or physical device)
+- iOS Simulator (for Mac) or Android Studio (for Android development)
 
 ### Installation
 
-1. Clone the repository
-```
-git clone https://github.com/your-username/snap-read.git
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/snap-read.git
 cd snap-read
 ```
 
-2. Install dependencies
-```
+2. Install dependencies:
+```bash
 npm install
+# or
+yarn install
 ```
 
-3. Start the development server
-```
-npx expo start
-```
-
-4. Run on iOS or Android device/emulator
-```
-# iOS
-npx expo run:ios
-
-# Android
-npx expo run:android
+3. Start the development server:
+```bash
+npm start
+# or
+yarn start
 ```
 
-## Project Structure
+4. Run on your device or simulator:
+- Press `i` for iOS simulator
+- Press `a` for Android emulator
+- Scan the QR code with Expo Go app on your physical device
 
-The project is organized as follows:
+## Development
+
+### Project Structure
 
 ```
-src/
-├── components/   # Reusable UI components
-├── context/      # React Context for state management
-├── navigation/   # Navigation configuration
-├── screens/      # App screens
-├── services/     # Services (DB, AI)
-├── types/        # TypeScript definitions
-└── utils/        # Helper functions
+snap-read/
+├── assets/           # Images, fonts, and other static files
+├── src/
+│   ├── components/  # Reusable UI components
+│   ├── screens/     # App screens
+│   ├── navigation/  # Navigation configuration
+│   ├── context/     # React Context providers
+│   ├── hooks/       # Custom React hooks
+│   ├── services/    # API and business logic
+│   └── utils/       # Helper functions
+├── scripts/         # Build and utility scripts
+└── app.json         # Expo configuration
 ```
 
-## Technologies Used
+### Available Scripts
 
-- React Native
-- Expo
-- TypeScript
-- React Navigation
-- SQLite (for local storage)
-- Expo Camera
-- React Native Paper (for UI components)
+- `npm start` - Start the Expo development server
+- `npm run android` - Run on Android
+- `npm run ios` - Run on iOS
+- `npm run web` - Run on web
+- `npm run generate-icons` - Generate app icons
+- `npm run generate-screenshots` - Generate app store screenshots
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- [Expo](https://expo.dev/) for the amazing React Native framework
+- [React Native Paper](https://callstack.github.io/react-native-paper/) for the UI components
+- [React Navigation](https://reactnavigation.org/) for the navigation system
+
+## Support
+
+For support, email support@snapread.app or join our Discord community. 
