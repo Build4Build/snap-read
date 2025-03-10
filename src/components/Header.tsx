@@ -1,66 +1,67 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { Appbar, useTheme as usePaperTheme } from 'react-native-paper';
-import { useTheme } from '../context/ThemeContext';
+import { View, StyleSheet } from 'react-native';
+import { Text, IconButton, useTheme } from 'react-native-paper';
+import { useNavigation } from '@react-navigation/native';
+import { RootStackNavigationProp } from '../types/navigation';
 
-export type HeaderProps = {
+interface HeaderProps {
   title: string;
   showBackButton?: boolean;
-  onBackButtonPress?: () => void;
-  rightAction?: 'search' | 'more';
-  onRightActionPress?: () => void;
-};
+  rightActions?: React.ReactNode;
+  onBackPress?: () => void;
+}
 
-export const Header: React.FC<HeaderProps> = ({ 
-  title, 
-  showBackButton = false, 
-  onBackButtonPress,
-  rightAction,
-  onRightActionPress 
+export const Header: React.FC<HeaderProps> = ({
+  title,
+  showBackButton = false,
+  rightActions,
+  onBackPress,
 }) => {
-  const { theme } = useTheme();
-  const paperTheme = usePaperTheme();
+  const theme = useTheme();
+  const navigation = useNavigation<RootStackNavigationProp>();
+
+  const handleBackPress = () => {
+    if (onBackPress) {
+      onBackPress();
+    } else {
+      navigation.goBack();
+    }
+  };
 
   return (
-    <Appbar.Header
-      style={[
-        styles.header,
-        { backgroundColor: theme.colors.surface }
-      ]}
-    >
+    <View style={[styles.header, { backgroundColor: theme.colors.primary }]}>
       {showBackButton && (
-        <Appbar.BackAction
-          onPress={onBackButtonPress}
-          color={theme.colors.primary}
+        <IconButton
+          icon="arrow-left"
+          size={24}
+          iconColor={theme.colors.onPrimary}
+          onPress={handleBackPress}
         />
       )}
-      
-      <Appbar.Content
-        title={title}
-        titleStyle={{ color: theme.colors.text }}
-      />
-      
-      {rightAction === 'search' && (
-        <Appbar.Action 
-          icon="magnify" 
-          color={theme.colors.primary}
-          onPress={onRightActionPress} 
-        />
-      )}
-      
-      {rightAction === 'more' && (
-        <Appbar.Action 
-          icon="dots-vertical" 
-          color={theme.colors.primary}
-          onPress={onRightActionPress} 
-        />
-      )}
-    </Appbar.Header>
+      <Text variant="titleLarge" style={[styles.title, { color: theme.colors.onPrimary }]}>
+        {title}
+      </Text>
+      <View style={styles.rightActions}>
+        {rightActions}
+      </View>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   header: {
-    elevation: 0,
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 8,
+    height: 56,
+  },
+  title: {
+    flex: 1,
+    textAlign: 'center',
+    marginRight: 48, // To center the title accounting for the back button
+  },
+  rightActions: {
+    position: 'absolute',
+    right: 8,
   },
 }); 

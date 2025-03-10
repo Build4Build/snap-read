@@ -1,31 +1,20 @@
 import React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { NavigationContainer } from '@react-navigation/native';
 import { PaperProvider } from 'react-native-paper';
-import { ThemeProvider, useTheme } from './src/context/ThemeContext';
-import Navigation from './src/navigation';
+import { ThemeProvider } from './src/context/ThemeContext';
+import { SubscriptionProvider } from './src/context/SubscriptionContext';
+import { AppNavigator } from './src/navigation/AppNavigator';
 
-// Wrap app with providers
-const AppContent = () => {
-  const { theme } = useTheme();
-  
-  return (
-    <PaperProvider theme={theme}>
-      <SafeAreaProvider>
-        <StatusBar style={theme.dark ? 'light' : 'dark'} />
-        <Navigation />
-      </SafeAreaProvider>
-    </PaperProvider>
-  );
-};
-
-// Main app component
-const App = () => {
+export default function App() {
   return (
     <ThemeProvider>
-      <AppContent />
+      <SubscriptionProvider>
+        <PaperProvider>
+          <NavigationContainer>
+            <AppNavigator />
+          </NavigationContainer>
+        </PaperProvider>
+      </SubscriptionProvider>
     </ThemeProvider>
   );
-};
-
-export default App; 
+} 
