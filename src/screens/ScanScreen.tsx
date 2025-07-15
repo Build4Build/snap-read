@@ -11,7 +11,7 @@ type ScanScreenNavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
 const ScanScreen = () => {
   const navigation = useNavigation<ScanScreenNavigationProp>();
-  
+
   // Navigate to camera screen
   const navigateToCamera = () => {
     navigation.navigate('Camera');
@@ -20,7 +20,7 @@ const ScanScreen = () => {
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
       <Header title="Scan" />
-      
+
       <ScrollView contentContainerStyle={styles.scrollContent}>
         <View style={styles.headerContainer}>
           <Text variant="headlineMedium" style={styles.title}>
@@ -30,7 +30,7 @@ const ScanScreen = () => {
             Take a picture of any book, magazine, or article to get an AI-powered summary and insights.
           </Text>
         </View>
-        
+
         <Card style={styles.mainCard}>
           <Card.Content style={styles.cardContent}>
             <View style={styles.iconContainer}>
@@ -51,30 +51,30 @@ const ScanScreen = () => {
             </Button>
           </Card.Content>
         </Card>
-        
+
         <Text variant="titleMedium" style={styles.tipsTitle}>
           Tips for Best Results
         </Text>
-        
+
         <View style={styles.tipsContainer}>
           <View style={styles.tipCard}>
             <Text style={styles.tipIcon}>💡</Text>
             <Text style={styles.tipTitle}>Good Lighting</Text>
             <Text style={styles.tipDescription}>Ensure there's enough light to clearly see the text.</Text>
           </View>
-          
+
           <View style={styles.tipCard}>
             <Text style={styles.tipIcon}>🔍</Text>
             <Text style={styles.tipTitle}>Proper Framing</Text>
             <Text style={styles.tipDescription}>Keep the text centered and fill the frame with the page.</Text>
           </View>
-          
+
           <View style={styles.tipCard}>
             <Text style={styles.tipIcon}>👤</Text>
             <Text style={styles.tipTitle}>Avoid Shadows</Text>
             <Text style={styles.tipDescription}>Try not to cast shadows on the page while scanning.</Text>
           </View>
-          
+
           <View style={styles.tipCard}>
             <Text style={styles.tipIcon}>📚</Text>
             <Text style={styles.tipTitle}>Flat Surface</Text>

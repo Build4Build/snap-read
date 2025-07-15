@@ -7,6 +7,9 @@ export type RootStackParamList = {
     imageUri: string;
     summary?: string;
     keywords?: string[];
+    quotes?: string[];
+    documentType?: 'book' | 'magazine' | 'newspaper' | 'article' | 'other';
+    isProcessing?: boolean;
   };
   History: undefined;
   Profile: undefined;

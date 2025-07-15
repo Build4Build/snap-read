@@ -48,19 +48,19 @@ export default function CameraScreen() {
 
     try {
       const photo = await cameraRef.current.takePictureAsync({
-        quality: 1,
-        base64: true,
-        exif: true,
+        quality: 0.8,
+        base64: false,
+        exif: false,
       });
-      
+
       if (!isSubscribed) {
         await incrementScanCount();
       }
-      
+
+      // Navigate to processing screen with loading state
       navigation.navigate('SummaryResult', {
         imageUri: photo.uri,
-        summary: 'Sample summary...', // Replace with actual AI processing
-        keywords: ['sample', 'keywords'], // Replace with actual keywords
+        isProcessing: true,
       });
     } catch (error) {
       console.error('Error taking picture:', error);
@@ -94,9 +94,9 @@ export default function CameraScreen() {
   return (
     <View style={styles.container}>
       <StatusBar style="light" />
-      <Header 
-        title="Scan Document" 
-        showBackButton 
+      <Header
+        title="Scan Document"
+        showBackButton
         onBackPress={() => navigation.navigate('Home')}
       />
       <Camera

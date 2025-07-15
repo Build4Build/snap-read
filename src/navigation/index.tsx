@@ -18,8 +18,11 @@ export type RootStackParamList = {
   Camera: undefined;
   SummaryResult: {
     imageUri: string;
-    summary: string;
-    keywords: string[];
+    summary?: string;
+    keywords?: string[];
+    quotes?: string[];
+    documentType?: 'book' | 'magazine' | 'newspaper' | 'article' | 'other';
+    isProcessing?: boolean;
   };
 };
 
@@ -54,7 +57,7 @@ const TabNavigator = () => {
         name="Home"
         component={HomeScreen}
         options={{
-          tabBarIcon: ({ color, size }) => (
+          tabBarIcon: ({ color, size }: { color: string; size: number }) => (
             <MaterialCommunityIcons name="home" color={color} size={size} />
           ),
         }}
@@ -63,7 +66,7 @@ const TabNavigator = () => {
         name="History"
         component={HistoryScreen}
         options={{
-          tabBarIcon: ({ color, size }) => (
+          tabBarIcon: ({ color, size }: { color: string; size: number }) => (
             <MaterialCommunityIcons name="history" color={color} size={size} />
           ),
         }}
@@ -72,7 +75,7 @@ const TabNavigator = () => {
         name="Profile"
         component={ProfileScreen}
         options={{
-          tabBarIcon: ({ color, size }) => (
+          tabBarIcon: ({ color, size }: { color: string; size: number }) => (
             <MaterialCommunityIcons name="account" color={color} size={size} />
           ),
         }}
