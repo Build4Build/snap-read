@@ -12,12 +12,14 @@ SnapRead is a powerful mobile app that helps you read and understand documents f
 
 ## Getting Started
 
+
 ### Prerequisites
 
 - Node.js (v14 or later)
 - npm or yarn
 - Expo CLI
 - iOS Simulator (for Mac) or Android Studio (for Android development)
+
 
 ### Installation
 
@@ -46,6 +48,7 @@ yarn start
 - Press `a` for Android emulator
 - Scan the QR code with Expo Go app on your physical device
 
+
 ## Development
 
 ### Project Structure
@@ -65,6 +68,7 @@ snap-read/
 └── app.json         # Expo configuration
 ```
 
+
 ### Available Scripts
 
 - `npm start` - Start the Expo development server
@@ -82,15 +86,6 @@ snap-read/
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- [Expo](https://expo.dev/) for the amazing React Native framework
-- [React Native Paper](https://callstack.github.io/react-native-paper/) for the UI components
-- [React Navigation](https://reactnavigation.org/) for the navigation system
 
 ## Who Built This SnapRead Mobile App?
 
@@ -103,6 +98,11 @@ Enjoying this project? **[Buy me a coffee](https://ko-fi.com/phenry)** (spoiler:
 [![Pierre-Henry Soria](https://s.gravatar.com/avatar/a210fe61253c43c869d71eaed0e90149?s=200)](https://ph7.me "Pierre-Henry Soria's personal website")
 
 [![@phenrysay][x-icon]](https://x.com/phenrysay "Follow Me on X") [![YouTube Tech Videos][youtube-icon]](https://www.youtube.com/@pH7Programming "My Tech YouTube Channel") [![pH-7][github-icon]](https://github.com/pH-7 "Follow Me on GitHub")
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
 <!-- GitHub's Markdown reference links -->
